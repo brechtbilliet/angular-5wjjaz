@@ -1,0 +1,37 @@
+:host {
+  background: #fff;
+  display: flex;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.write-post {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  &--loading {
+    .write-post__avatar {
+      background: #f1f1f1;
+    }
+    .write-post__text-input {
+      background: #f1f1f1;
+    }
+  }
+  &__avatar {
+    display: flex;
+    width: 50px;
+    min-width: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 50px;
+    border-radius: 50%;
+  }
+  &__text-input {
+    margin-left: 16px;
+    border-radius: 8px;
+    display: flex;
+    height: 32px;
+    width: 100%;
+  }
+}
