@@ -1,8 +1,16 @@
-:host {
+.event {
   display: flex;
   align-items: center;
   padding: 16px;
-  .event__avatar {
+  &--loading {
+    .event__avatar {
+      background: #ccc;
+    }
+    .event__loading {
+      background: #ccc;
+    }
+  }
+  &__avatar {
     display: flex;
     width: 50px;
     min-width: 50px;
@@ -10,14 +18,12 @@
     align-items: center;
     align-content: center;
     height: 50px;
-    background: #ccc;
     border-radius: 50%;
   }
-  .event__label {
+  &__label {
     margin-left: 16px;
     display: flex;
     height: 16px;
     width: 100%;
-    background: #ccc;
   }
 }
