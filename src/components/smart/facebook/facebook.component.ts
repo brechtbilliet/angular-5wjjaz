@@ -7,8 +7,8 @@ import { WritePostComponent } from '../../ui/write-post/write-post.component';
 import { TimelineComponent } from '../../ui/timeline/timeline.component';
 import { StoryListComponent } from '../../ui/story-list/story-list.component';
 import { User } from '../../../types/user';
-import { Story } from '../../..//types/story';
-import { ObservableState } from 'src/utils/observable-state';
+import { Story } from '../../../types/story';
+import { ObservableState } from '../../../utils/observable-state';
 
 type FacebookState = {
   users: User[];

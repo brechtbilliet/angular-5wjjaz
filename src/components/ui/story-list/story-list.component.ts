@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { Story } from 'src/types/story';
 import { StoryComponent } from '../story/story.component';
 
 @Component({
@@ -11,4 +12,5 @@ import { StoryComponent } from '../story/story.component';
 })
 export class StoryListComponent {
   @Input() public loading = true;
+  @Input() public stories: Story[];
 }

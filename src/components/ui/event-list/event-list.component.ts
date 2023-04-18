@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Event } from '../../types/event';
 import { EventComponent } from '../event/event.component';
 
 @Component({
@@ -11,4 +12,5 @@ import { EventComponent } from '../event/event.component';
 })
 export class EventListComponent {
   @Input() public loading = true;
+  @Input() public events: Event[];
 }

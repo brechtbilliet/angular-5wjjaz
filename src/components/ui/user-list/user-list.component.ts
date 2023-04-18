@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
-import { UserComponent } from '..//user/user.component';
+import { User } from '../../types/user';
+import { UserComponent } from '../user/user.component';
 
 @Component({
   selector: 'app-user-list',
@@ -11,4 +12,5 @@ import { UserComponent } from '..//user/user.component';
 })
 export class UserListComponent {
   @Input() public loading = true;
+  @Input() public users: User[];
 }
