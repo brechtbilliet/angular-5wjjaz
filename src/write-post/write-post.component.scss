@@ -5,3 +5,13 @@
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+.write-post {
+  &--loading {
+    .write-post__avatar {
+      background: #ccc;
+    }
+    .write-post__text-input {
+      background: #ccc;
+    }
+  }
+}
