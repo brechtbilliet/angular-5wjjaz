@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  width: 100%;
+  background: #f1f1f1;
+}
+.app__main {
+  width: 50%;
+  padding: 20px;
+}
+
+.app__event-list {
+  width: 25%;
+}
+.app__user-list {
+  width: 25%;
+}

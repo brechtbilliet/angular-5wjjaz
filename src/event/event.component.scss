@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  .event__avatar {
+    display: flex;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 50px;
+    background: #ccc;
+    border-radius: 50%;
+  }
+  .event__label {
+    margin-left: 16px;
+    display: flex;
+    height: 16px;
+    width: 100%;
+    background: #ccc;
+  }
+}
