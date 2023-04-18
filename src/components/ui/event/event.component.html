@@ -1,4 +1,6 @@
 <div class="event" [class.event--loading]="loading">
-  <div class="event__avatar"></div>
-  <div class="event__label"></div>
+  <div class="event__avatar">
+    <img [width]="50" [height]="50" [ngSrc]="event.avatar" *ngIf="event" />
+  </div>
+  <div class="event__label">{{event?.label}}</div>
 </div>

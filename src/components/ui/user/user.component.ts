@@ -1,11 +1,15 @@
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { User } from '../../../types/user';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
+  imports: [NgOptimizedImage, CommonModule],
   standalone: true,
   styleUrls: ['./user.component.scss']
 })
 export class UserComponent {
-  @Input() public loading = true;
+  @Input() public loading = false;
+  @Input() public user: User|null = null;
 }

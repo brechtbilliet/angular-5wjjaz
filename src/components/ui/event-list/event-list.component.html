@@ -1,3 +1,4 @@
 <ng-container *ngIf="loading">
   <app-event [loading]="true" *ngFor="let item of [1,2,3]"></app-event>
 </ng-container>
+<app-event [event]="event" *ngFor="let event of events"></app-event>

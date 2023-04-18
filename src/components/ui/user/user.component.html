@@ -1,4 +1,6 @@
 <div class="user" [class.user--loading]="loading">
-  <div class="user__avatar"></div>
-  <div class="user__label"></div>
+  <div class="user__avatar">
+    <img [width]="50" [height]="50" [ngSrc]="user.avatar" *ngIf="user" />
+  </div>
+  <div class="user__label">{{user?.firstName}} {{user?.lastName}}</div>
 </div>

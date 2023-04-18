@@ -10,7 +10,8 @@
       background: #ccc;
     }
   }
-  &__avatar {
+  &__avatar,
+  &__avatar img {
     display: flex;
     width: 50px;
     min-width: 50px;
@@ -23,7 +24,6 @@
   &__label {
     margin-left: 16px;
     border-radius: 8px;
-    border: 1px solid #ccc;
     display: flex;
     height: 16px;
     width: 100%;

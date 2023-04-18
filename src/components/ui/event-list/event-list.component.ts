@@ -11,6 +11,6 @@ import { EventComponent } from '../event/event.component';
   styleUrls: ['./event-list.component.scss'],
 })
 export class EventListComponent {
-  @Input() public loading = true;
+  @Input() public loading = false;
   @Input() public events: Event[];
 }

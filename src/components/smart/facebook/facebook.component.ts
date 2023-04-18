@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { delay, Observable, of } from 'rxjs';
+import { Component } from '@angular/core';
+import { delay, from, Observable, of, tap } from 'rxjs';
 import { EventListComponent } from '../../ui/event-list/event-list.component';
 import { UserListComponent } from '../../ui/user-list/user-list.component';
 import { WritePostComponent } from '../../ui/write-post/write-post.component';
@@ -8,7 +8,9 @@ import { TimelineComponent } from '../../ui/timeline/timeline.component';
 import { StoryListComponent } from '../../ui/story-list/story-list.component';
 import { User } from '../../../types/user';
 import { Story } from '../../../types/story';
+import { Event } from '../../../types/event';
 import { ObservableState } from '../../../utils/observable-state';
+import { events, users } from '../../../data/data';
 
 type FacebookState = {
   users: User[];
@@ -52,6 +54,22 @@ export class FacebookComponent extends ObservableState<FacebookState> {
       storiesLoading: true,
       events: [],
       eventsLoading: true,
+    });
+    const events$ = of(events).pipe(
+      delay(1000),
+      tap(() => {
+        this.patch({ eventsLoading: false });
+      })
+    );
+    const users$ = of(users).pipe(
+      delay(2000),
+      tap(() => {
+        this.patch({ usersLoading: false });
+      })
+    );
+    this.connect({
+      events: events$,
+      users: users$
     });
   }
 }

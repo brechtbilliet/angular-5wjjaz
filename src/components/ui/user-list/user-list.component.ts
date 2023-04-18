@@ -11,6 +11,6 @@ import { UserComponent } from '../user/user.component';
   styleUrls: ['./user-list.component.scss'],
 })
 export class UserListComponent {
-  @Input() public loading = true;
+  @Input() public loading = false;
   @Input() public users: User[];
 }
