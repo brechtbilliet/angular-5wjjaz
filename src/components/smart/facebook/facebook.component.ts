@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { delay, from, Observable, of, tap } from 'rxjs';
+import { delay, from, map, Observable, of, tap } from 'rxjs';
 import { EventListComponent } from '../../ui/event-list/event-list.component';
 import { UserListComponent } from '../../ui/user-list/user-list.component';
 import { WritePostComponent } from '../../ui/write-post/write-post.component';
@@ -10,7 +10,7 @@ import { User } from '../../../types/user';
 import { Story } from '../../../types/story';
 import { Event } from '../../../types/event';
 import { ObservableState } from '../../../utils/observable-state';
-import { events, users } from '../../../data/data';
+import { events, stories, users } from '../../../data/data';
 
 type FacebookState = {
   users: User[];
@@ -28,7 +28,9 @@ type ViewModel = Pick<
   | 'storiesLoading'
   | 'events'
   | 'eventsLoading'
->;
+> & {
+  someLoading: boolean;
+};
 @Component({
   selector: 'app-facebook',
   templateUrl: './facebook.component.html',
@@ -44,7 +46,19 @@ type ViewModel = Pick<
   styleUrls: ['./facebook.component.scss'],
 })
 export class FacebookComponent extends ObservableState<FacebookState> {
-  public readonly vm$: Observable<ViewModel> = this.state$;
+  public readonly vm$: Observable<ViewModel> = this.state$.pipe(
+    map(state => {
+      return {
+        users: state.users,
+        events: state.events,
+        stories: state.stories,
+        usersLoading: state.usersLoading,
+        storiesLoading: state.storiesLoading,
+        eventsLoading: state.eventsLoading,
+        someLoading: state.usersLoading || state.storiesLoading || state.eventsLoading
+      }
+    })
+  );
   constructor() {
     super();
     this.initialize({
@@ -67,9 +81,16 @@ export class FacebookComponent extends ObservableState<FacebookState> {
         this.patch({ usersLoading: false });
       })
     );
+    const stories$ = of(stories).pipe(
+      delay(3000),
+      tap(() => {
+        this.patch({ storiesLoading: false });
+      })
+    );
     this.connect({
       events: events$,
-      users: users$
+      users: users$,
+      stories: stories$
     });
   }
 }

@@ -2,7 +2,7 @@
   <app-event-list class="app__event-list" [events]="vm.events" [loading]="vm.eventsLoading"></app-event-list>
   <div class="app__main">
     <app-story-list [stories]="vm.stories" [loading]="vm.storiesLoading"></app-story-list>
-    <app-write-post class="app__write-post"></app-write-post>
+    <app-write-post class="app__write-post" [loading]="vm.someLoading"></app-write-post>
     <app-timeline></app-timeline>
   </div>
   <app-user-list class="app__user-list" [users]="vm.users" [loading]="vm.usersLoading"></app-user-list>

@@ -1,5 +1,6 @@
 import { User } from '../types/user';
 import { Event} from '../types/event';
+import { Story } from '..//types/story';
 
 export const users: User[] = [
   {
@@ -34,6 +35,7 @@ export const users: User[] = [
   }
 ]
 
+export const stories: Story[] = [];
 
 export const events: Event[] = [
   {

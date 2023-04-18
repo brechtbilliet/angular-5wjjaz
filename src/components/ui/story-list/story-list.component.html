@@ -1,3 +1,6 @@
 <ng-container *ngIf="loading">
   <app-story [loading]="true" *ngFor="let item of [1,2,3,4]"></app-story>
 </ng-container>
+<ng-container *ngIf="!loading && stories.length === 0">
+  <strong>No stories yet</strong>
+</ng-container>

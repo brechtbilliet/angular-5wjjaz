@@ -17,7 +17,8 @@
       background: #f1f1f1;
     }
   }
-  &__avatar {
+  &__avatar,
+  &__avatar img  {
     display: flex;
     width: 50px;
     min-width: 50px;
