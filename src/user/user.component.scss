@@ -1,12 +1,12 @@
-.event {
+.user {
   display: flex;
   align-items: center;
   padding: 16px;
   &--loading {
-    .event__avatar {
+    .user__avatar {
       background: #ccc;
     }
-    .event__label {
+    .user__label {
       background: #ccc;
     }
   }
