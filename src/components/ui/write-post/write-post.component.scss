@@ -8,6 +8,9 @@
 .write-post {
   display: flex;
   width: 100%;
+  input {
+    width: 100%;
+  }
   align-items: center;
   &--loading {
     .write-post__avatar {

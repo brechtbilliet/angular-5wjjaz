@@ -12,3 +12,6 @@ export class EventComponent {
   @Input() public loading = false;
   @Input() public event: Event;
 }
+
+// todo: HostDirective om loading class hier op te zetten:
+// <selector>--loading

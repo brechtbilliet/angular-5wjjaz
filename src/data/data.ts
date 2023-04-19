@@ -35,7 +35,23 @@ export const users: User[] = [
   }
 ]
 
-export const stories: Story[] = [];
+export const stories: Story[] = [
+  {
+    id: '1',
+    description: 'lipsum dolor etmet',
+    avatar: "https://blog.simplified.courses/assets/angular-proven-enterprise-solutions.jpg"
+  },
+  {
+    id: '2',
+    description: 'lipsum dolor etmet',
+    avatar: "https://blog.simplified.courses/assets/angular-proven-enterprise-solutions.jpg"
+  },
+  {
+    id: '3',
+    description: 'lipsum dolor etmet',
+    avatar: "https://blog.simplified.courses/assets/angular-proven-enterprise-solutions.jpg"
+  }
+];
 
 export const events: Event[] = [
   {

@@ -1,16 +1,17 @@
 .story {
   display: flex;
+  flex-direction: column;
+  background: #ddd;
   padding: 16px;
   height: 220px;
-  border: 1px solid #ccc;
   border-radius: 8px;
   &--loading {
-    background: #ddd;
     .story__avatar {
       background: #ccc;
     }
   }
-  &__avatar {
+  &__avatar,
+  &__avatar img {
     display: flex;
     width: 50px;
     min-width: 50px;
