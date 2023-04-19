@@ -1,11 +1,16 @@
 .story {
   display: flex;
   flex-direction: column;
-  background: #ddd;
+  background: #fff;
+  border: 1px solid #ccc;
+  align-items: center;
+  max-width: 70px;
+  text-align: center;
   padding: 16px;
   height: 220px;
   border-radius: 8px;
   &--loading {
+    background: #ddd;
     .story__avatar {
       background: #ccc;
     }

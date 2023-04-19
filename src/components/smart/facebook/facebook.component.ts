@@ -70,19 +70,19 @@ export class FacebookComponent extends ObservableState<FacebookState> {
       eventsLoading: true,
     });
     const events$ = of(events).pipe(
-      delay(1000),
+      delay(10000),
       tap(() => {
         this.patch({ eventsLoading: false });
       })
     );
     const users$ = of(users).pipe(
-      delay(2000),
+      delay(20000),
       tap(() => {
         this.patch({ usersLoading: false });
       })
     );
     const stories$ = of(stories).pipe(
-      delay(3000),
+      delay(30000),
       tap(() => {
         this.patch({ storiesLoading: false });
       })

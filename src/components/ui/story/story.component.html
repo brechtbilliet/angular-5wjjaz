@@ -1,6 +1,6 @@
-<div class="story" [class.story--loading]="loading">
+<div class="story">
   <div class="story__avatar">
     <img [width]="50" [height]="50" [ngSrc]="story.avatar" *ngIf="story" />
   </div>
-  <p>{{story?.description}}</p>
+  <p *ngIf="!loading">story: {{story?.description}}</p>
 </div>
