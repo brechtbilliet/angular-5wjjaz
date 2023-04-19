@@ -10,10 +10,12 @@ import { UserComponent } from '../user/user.component';
   imports: [CommonModule, UserComponent, LoadingDirective],
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss'],
-  hostDirectives: [{
-    directive: LoadingDirective,
-    inputs:['loading']
-  }],
+  hostDirectives: [
+    {
+      directive: LoadingDirective,
+      inputs: ['loading'],
+    },
+  ],
 })
 export class UserListComponent {
   public readonly loading = inject(LoadingDirective).loading;

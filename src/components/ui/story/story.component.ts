@@ -7,14 +7,16 @@ import { Story } from '../../../types/story';
   selector: 'app-story',
   standalone: true,
   imports: [NgOptimizedImage, CommonModule, LoadingDirective],
-  hostDirectives: [{
-    directive: LoadingDirective,
-    inputs:['loading']
-  }],
+  hostDirectives: [
+    {
+      directive: LoadingDirective,
+      inputs: ['loading'],
+    },
+  ],
   templateUrl: './story.component.html',
-  styleUrls: ['./story.component.scss']
+  styleUrls: ['./story.component.scss'],
 })
-export class StoryComponent  {
-  @Input() public story: Story|null;
+export class StoryComponent {
+  @Input() public story: Story | null;
   public readonly loading = inject(LoadingDirective).loading;
 }

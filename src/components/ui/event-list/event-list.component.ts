@@ -10,9 +10,9 @@ import { EventComponent } from '../event/event.component';
   imports: [CommonModule, EventComponent, LoadingDirective],
   hostDirectives: [{
     directive: LoadingDirective,
-    inputs:['loading']
+    inputs: ['loading']
   }],
-  standalone: true,
+    standalone: true,
   styleUrls: ['./event-list.component.scss'],
 })
 export class EventListComponent {

@@ -11,6 +11,7 @@ import { Story } from '../../../types/story';
 import { Event } from '../../../types/event';
 import { ObservableState } from '../../../utils/observable-state';
 import { events, stories, users } from '../../../data/data';
+import { LoadingDirective } from '../../../loading.directive';
 
 type FacebookState = {
   users: User[];
@@ -40,7 +41,7 @@ type ViewModel = Pick<
     StoryListComponent,
     UserListComponent,
     WritePostComponent,
-    TimelineComponent,
+    TimelineComponent
   ],
   standalone: true,
   styleUrls: ['./facebook.component.scss'],

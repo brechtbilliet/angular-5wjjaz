@@ -8,7 +8,7 @@ import { Event } from '../../../types/event';
   imports: [NgOptimizedImage, CommonModule, LoadingDirective],
   hostDirectives: [{
     directive: LoadingDirective,
-    inputs:['loading']
+    inputs: ['loading']
   }],
   standalone: true,
   styleUrls: ['./event.component.scss']

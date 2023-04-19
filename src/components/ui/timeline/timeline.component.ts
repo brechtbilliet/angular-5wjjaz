@@ -7,11 +7,12 @@ import { LoadingDirective } from '../../../loading.directive';
   standalone: true,
   templateUrl: './timeline.component.html',
   imports: [CommonModule, LoadingDirective],
-  hostDirectives: [{
-    directive: LoadingDirective,
-    inputs:['loading']
-  }],
-  styleUrls: ['./timeline.component.scss']
+  hostDirectives: [
+    {
+      directive: LoadingDirective,
+      inputs: ['loading'],
+    },
+  ],
+  styleUrls: ['./timeline.component.scss'],
 })
-export class TimelineComponent {
-}
+export class TimelineComponent {}

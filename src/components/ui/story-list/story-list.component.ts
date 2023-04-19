@@ -8,10 +8,12 @@ import { StoryComponent } from '../story/story.component';
   selector: 'app-story-list',
   templateUrl: './story-list.component.html',
   imports: [CommonModule, StoryComponent, LoadingDirective],
-  hostDirectives: [{
-    directive: LoadingDirective,
-    inputs:['loading']
-  }],
+  hostDirectives: [
+    {
+      directive: LoadingDirective,
+      inputs: ['loading'],
+    },
+  ],
   standalone: true,
   styleUrls: ['./story-list.component.scss'],
 })
