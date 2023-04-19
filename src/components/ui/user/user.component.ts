@@ -17,6 +17,5 @@ import { User } from '../../../types/user';
   styleUrls: ['./user.component.scss'],
 })
 export class UserComponent {
-  @Input() public loading = false;
   @Input() public user: User | null = null;
 }

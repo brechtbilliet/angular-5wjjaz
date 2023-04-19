@@ -18,6 +18,8 @@ import { UserComponent } from '../user/user.component';
   ],
 })
 export class UserListComponent {
-  public readonly loading = inject(LoadingDirective).loading;
-  @Input() public users: User[];
+  private readonly loadingDirective = inject(LoadingDirective);
+  public get loading(){
+    return this.loadingDirective.loading;
+  }  @Input() public users: User[];
 }

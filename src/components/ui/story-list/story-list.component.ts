@@ -19,5 +19,8 @@ import { StoryComponent } from '../story/story.component';
 })
 export class StoryListComponent {
   @Input() public stories: Story[];
-  public readonly loading = inject(LoadingDirective).loading;
+  private readonly loadingDirective = inject(LoadingDirective);
+  public get loading() {
+    return this.loadingDirective.loading;
+  }
 }

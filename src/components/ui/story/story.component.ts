@@ -18,5 +18,8 @@ import { Story } from '../../../types/story';
 })
 export class StoryComponent {
   @Input() public story: Story | null;
-  public readonly loading = inject(LoadingDirective).loading;
+  private readonly loadingDirective = inject(LoadingDirective);
+  public get loading(){
+    return this.loadingDirective.loading;
+  }
 }

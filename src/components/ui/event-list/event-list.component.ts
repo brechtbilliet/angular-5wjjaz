@@ -17,5 +17,8 @@ import { EventComponent } from '../event/event.component';
 })
 export class EventListComponent {
   @Input() public events: Event[];
-  public readonly loading = inject(LoadingDirective).loading;
+  private readonly loadingDirective = inject(LoadingDirective);
+  public get loading(){
+    return this.loadingDirective.loading;
+  }
 }

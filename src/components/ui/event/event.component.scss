@@ -1,15 +1,16 @@
+.loading {
+  .event__avatar {
+    background: #ccc;
+  }
+  .event__label {
+    background: #ccc;
+  }
+}
 .event {
   display: flex;
   align-items: center;
   padding: 8px;
-  .loading {
-    .event__avatar {
-      background: #ccc;
-    }
-    .event__label {
-      background: #ccc;
-    }
-  }
+
   &__avatar,
   &__avatar img {
     display: flex;

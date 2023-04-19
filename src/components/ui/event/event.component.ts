@@ -16,6 +16,3 @@ import { Event } from '../../../types/event';
 export class EventComponent {
   @Input() public event: Event|null;
 }
-
-// todo: HostDirective om loading class hier op te zetten:
-// <selector>--loading

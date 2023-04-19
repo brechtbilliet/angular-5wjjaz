@@ -16,5 +16,8 @@ import { LoadingDirective } from '../../../loading.directive';
   styleUrls: ['./write-post.component.scss'],
 })
 export class WritePostComponent {
-  public readonly loading = inject(LoadingDirective).loading;
+  private readonly loadingDirective = inject(LoadingDirective);
+  public get loading() {
+    return this.loadingDirective.loading;
+  }
 }
