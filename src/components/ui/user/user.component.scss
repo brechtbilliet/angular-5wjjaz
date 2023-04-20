@@ -1,4 +1,5 @@
-.loading {
+:host.loading {
+  background: #ff0000;
   .user__avatar {
     background: #ccc;
   }
@@ -6,6 +7,7 @@
     background: #ccc;
   }
 }
+
 .user {
   display: flex;
   align-items: center;

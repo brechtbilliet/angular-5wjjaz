@@ -5,6 +5,14 @@
   border-radius: 8px;
   border: 1px solid #ccc;
 }
+:host.loading {
+  .write-post__avatar {
+    background: #f1f1f1;
+  }
+  .write-post__text-input {
+    background: #f1f1f1;
+  }
+}
 .write-post {
   display: flex;
   width: 100%;
@@ -12,14 +20,7 @@
     width: 100%;
   }
   align-items: center;
-  &--loading {
-    .write-post__avatar {
-      background: #f1f1f1;
-    }
-    .write-post__text-input {
-      background: #f1f1f1;
-    }
-  }
+
   &__avatar,
   &__avatar img  {
     display: flex;
