@@ -1,9 +1,10 @@
+@import '../../../mixins.scss';
 :host.loading {
   .story {
     background: #ddd;
   }
   .story__avatar {
-    background: #ccc;
+    @include loading-animation();
   }
 }
 .story {

@@ -77,7 +77,7 @@ export class FacebookComponent extends ObservableState<FacebookState> {
       })
     );
     const users$ = of(users).pipe(
-      delay(2000000000),
+      delay(2000),
       tap(() => {
         this.patch({ usersLoading: false });
       })

@@ -1,9 +1,10 @@
+@import '../../../mixins.scss';
 :host.loading {
   .event__avatar {
-    background: #ccc;
+    @include loading-animation();
   }
   .event__label {
-    background: #ccc;
+    @include loading-animation();
   }
 }
 .event {
