@@ -1,10 +1,11 @@
 :host.loading {
   background: #ff0000;
+  
   .user__avatar {
-    background: #ccc;
+   @include loading-animation();
   }
   .user__label {
-    background: #ccc;
+    @include loading-animation();
   }
 }
 
