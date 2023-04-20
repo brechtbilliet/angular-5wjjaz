@@ -1,15 +1,16 @@
+.loading {
+  .user__avatar {
+    background: #ccc;
+  }
+  .user__label {
+    background: #ccc;
+  }
+}
 .user {
   display: flex;
   align-items: center;
   padding: 8px;
-  &--loading {
-    .user__avatar {
-      background: #ccc;
-    }
-    .user__label {
-      background: #ccc;
-    }
-  }
+  
   &__avatar,
   &__avatar img {
     display: flex;
